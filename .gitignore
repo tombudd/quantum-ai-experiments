@@ -1,0 +1,62 @@
+# Environment & secrets
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Credentials & keys
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+*.keystore
+id_rsa
+id_ed25519
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+venv/
+.venv/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+
+# Model weights & large binaries
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.h5
+*.pkl
+
+# Databases
+*.sqlite
+*.sqlite3
+*.db
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Docker overrides
+docker-compose.override.yml
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
