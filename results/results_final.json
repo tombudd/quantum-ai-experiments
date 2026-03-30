@@ -1,0 +1,95 @@
+{
+  "timestamp": "2026-03-30T01:20:12.782380",
+  "results": {
+    "IBM/Qiskit": {
+      "Bell State": {
+        "status": "pass",
+        "detail": "counts={'00': 524, '11': 500}",
+        "duration_s": 0.001
+      },
+      "GHZ 10-qubit": {
+        "status": "pass",
+        "detail": "dominant=0000000000... (531/1024)",
+        "duration_s": 0.002
+      },
+      "QFT 6-qubit": {
+        "status": "pass",
+        "detail": "64 unique outcomes",
+        "duration_s": 1.128
+      },
+      "Quantum Volume (4\u00d74)": {
+        "status": "pass",
+        "detail": "16 outcomes / 1024 shots",
+        "duration_s": 0.609
+      }
+    },
+    "Google Cirq": {
+      "Bell State (ideal)": {
+        "status": "pass",
+        "detail": "shape=(1024, 2)",
+        "duration_s": 0.002
+      },
+      "GHZ 10-qubit": {
+        "status": "pass",
+        "detail": "1024 shots",
+        "duration_s": 0.003
+      },
+      "QFT 5-qubit": {
+        "status": "pass",
+        "detail": "512 shots",
+        "duration_s": 0.001
+      },
+      "Bell State (1% noise)": {
+        "status": "pass",
+        "detail": "counts={'00': 265, '11': 235, '01': 4, '10': 8}",
+        "duration_s": 0.002
+      }
+    },
+    "PennyLane": {
+      "Bell State": {
+        "status": "pass",
+        "detail": "|00\u27e9=0.500  |11\u27e9=0.500",
+        "duration_s": 0.001
+      },
+      "GHZ 12-qubit": {
+        "status": "pass",
+        "detail": "|00\u27e9=0.500  |11\u27e9=0.500",
+        "duration_s": 0.001
+      },
+      "VQC + Gradient": {
+        "status": "pass",
+        "detail": "\u27e8Z\u2080\u27e9=0.9950  \u2207=[-0.1, -0.0, 0.0, -0.0]",
+        "duration_s": 0.003
+      },
+      "Quantum Kernel": {
+        "status": "pass",
+        "detail": "K(x1,x2)=0.9511",
+        "duration_s": 0.002
+      }
+    },
+    "AWS Braket": {
+      "Credentials": {
+        "status": "pass",
+        "detail": "Account=397882323019",
+        "duration_s": 0.49
+      },
+      "Device Discovery": {
+        "status": "pass",
+        "detail": "10 devices found, sims=['Aria 1', 'Aquila', 'Harmony', 'TN1', 'Aria 2', 'SV1']",
+        "duration_s": 0.802
+      },
+      "Local Simulator": {
+        "status": "skip",
+        "detail": "Pydantic v1/Python 3.14 incompatibility \u2014 SDK upgrade pending",
+        "duration_s": 0
+      }
+    },
+    "IonQ": {
+      "Suite error": {
+        "status": "fail",
+        "detail": "IonQCredentialsError('Credentials `token` may not be None!')",
+        "duration_s": 0
+      }
+    }
+  }
+}

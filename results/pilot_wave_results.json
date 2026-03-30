@@ -1,0 +1,685 @@
+{
+  "experiment_suite": "Pilot Wave Theory \u2014 de Broglie-Bohm Experiments",
+  "inspired_by": "Valentini, Beyond the Quantum (OUP 2026) / Scientific American Mar 2026",
+  "timestamp": "2026-03-21T12:34:19.813745",
+  "results": {
+    "EXP-12": {
+      "name": "Born Rule Deviation Search",
+      "status": "pass",
+      "detail": "7 chi\u00b2 tests | 0 significant (p<0.05) | Expected false positives: 0.4 | Verdict: Consistent with Born rule",
+      "duration_s": 0.362,
+      "data": {
+        "chi2_tests": [
+          {
+            "basis": "H|0\u27e9 \u2192 Z-basis",
+            "chi2": 0.05908203125,
+            "p_value": 0.8079527542652443,
+            "observed": [
+              4085,
+              4107
+            ],
+            "expected": [
+              4096,
+              4096
+            ]
+          },
+          {
+            "basis": "Ry(0.5236)|0\u27e9",
+            "chi2": 2.158,
+            "p_value": 0.141828,
+            "observed": [
+              7610,
+              582
+            ],
+            "expected": [
+              7643.2,
+              548.8
+            ],
+            "born_rule_pred": 0.933
+          },
+          {
+            "basis": "Ry(0.7854)|0\u27e9",
+            "chi2": 0.7826,
+            "p_value": 0.376336,
+            "observed": [
+              6964,
+              1228
+            ],
+            "expected": [
+              6992.3,
+              1199.7
+            ],
+            "born_rule_pred": 0.8536
+          },
+          {
+            "basis": "Ry(1.0472)|0\u27e9",
+            "chi2": 2.9225,
+            "p_value": 0.087351,
+            "observed": [
+              6077,
+              2115
+            ],
+            "expected": [
+              6144.0,
+              2048.0
+            ],
+            "born_rule_pred": 0.75
+          },
+          {
+            "basis": "Ry(1.2566)|0\u27e9",
+            "chi2": 0.3724,
+            "p_value": 0.541676,
+            "observed": [
+              5388,
+              2804
+            ],
+            "expected": [
+              5361.7,
+              2830.3
+            ],
+            "born_rule_pred": 0.6545
+          },
+          {
+            "basis": "Ry(1.3464)|0\u27e9",
+            "chi2": 0.0158,
+            "p_value": 0.89982,
+            "observed": [
+              5013,
+              3179
+            ],
+            "expected": [
+              5007.4,
+              3184.6
+            ],
+            "born_rule_pred": 0.6113
+          },
+          {
+            "basis": "Bell(\u03a6+) \u2192 ZZ",
+            "chi2": 0.0,
+            "p_value": 1.0,
+            "observed": {
+              "00": 4076,
+              "11": 4116,
+              "01": 0,
+              "10": 0
+            },
+            "anomalous_fraction": 0.0
+          },
+          {
+            "basis": "GHZ-5 \u2192 Z\u22975",
+            "valid_fraction": 1.0,
+            "anomalous_fraction": 0.0,
+            "all_zero": 4075,
+            "all_one": 4117,
+            "other_states": 0
+          },
+          {
+            "basis": "GHZ-8 \u2192 Z\u22978",
+            "valid_fraction": 1.0,
+            "anomalous_fraction": 0.0,
+            "all_zero": 4090,
+            "all_one": 4102,
+            "other_states": 0
+          },
+          {
+            "basis": "GHZ-12 \u2192 Z\u229712",
+            "valid_fraction": 1.0,
+            "anomalous_fraction": 0.0,
+            "all_zero": 4090,
+            "all_one": 4102,
+            "other_states": 0
+          }
+        ],
+        "shots_per_test": 8192
+      }
+    },
+    "EXP-13": {
+      "name": "Bohmian Trajectory Reconstruction",
+      "status": "anomaly",
+      "detail": "7 weak measurement strengths tested | Complementarity violations: 4 | Trajectory visibility range: 0.504 \u2192 0.655",
+      "duration_s": 0.006,
+      "data": {
+        "trajectories": [
+          {
+            "weak_angle": 0.1,
+            "visibility": 0.5045,
+            "which_path_info": 0.9985,
+            "complementarity_sum": 1.2516,
+            "meter_counts": {
+              "0": 4093,
+              "1": 3
+            },
+            "raw_counts": {
+              "111": 3,
+              "101": 2028,
+              "000": 2065
+            }
+          },
+          {
+            "weak_angle": 0.2,
+            "visibility": 0.494,
+            "which_path_info": 0.9858,
+            "complementarity_sum": 1.2159,
+            "meter_counts": {
+              "0": 4067,
+              "1": 29
+            },
+            "raw_counts": {
+              "111": 29,
+              "000": 2009,
+              "101": 2058
+            }
+          },
+          {
+            "weak_angle": 0.3,
+            "visibility": 0.5044,
+            "which_path_info": 0.9795,
+            "complementarity_sum": 1.2139,
+            "meter_counts": {
+              "0": 4054,
+              "1": 42
+            },
+            "raw_counts": {
+              "111": 42,
+              "101": 2009,
+              "000": 2045
+            }
+          },
+          {
+            "weak_angle": 0.5,
+            "visibility": 0.523,
+            "which_path_info": 0.9409,
+            "complementarity_sum": 1.1589,
+            "meter_counts": {
+              "0": 3975,
+              "1": 121
+            },
+            "raw_counts": {
+              "111": 121,
+              "000": 2079,
+              "101": 1896
+            }
+          },
+          {
+            "weak_angle": 0.8,
+            "visibility": 0.5458,
+            "which_path_info": 0.8535,
+            "complementarity_sum": 1.0264,
+            "meter_counts": {
+              "0": 3796,
+              "1": 300
+            },
+            "raw_counts": {
+              "111": 300,
+              "000": 2072,
+              "101": 1724
+            }
+          },
+          {
+            "weak_angle": 1.0,
+            "visibility": 0.5838,
+            "which_path_info": 0.7632,
+            "complementarity_sum": 0.9232,
+            "meter_counts": {
+              "0": 3611,
+              "1": 485
+            },
+            "raw_counts": {
+              "111": 485,
+              "000": 2108,
+              "101": 1503
+            }
+          },
+          {
+            "weak_angle": 1.5708,
+            "visibility": 0.6552,
+            "which_path_info": 0.4941,
+            "complementarity_sum": 0.6735,
+            "meter_counts": {
+              "0": 3060,
+              "1": 1036
+            },
+            "raw_counts": {
+              "101": 1055,
+              "000": 2005,
+              "111": 1036
+            }
+          }
+        ]
+      }
+    },
+    "EXP-14": {
+      "name": "CHSH Bell Inequality at Scale",
+      "status": "anomaly",
+      "detail": "S = 2.8315 (theory: 2.8284, deviation: 0.1102%) | Classical bound: 2.0 | Tsirelson bound: 2.828 | Tsirelson violations in sweep: 1/8",
+      "duration_s": 0.017,
+      "data": {
+        "S_value": 2.831543,
+        "correlators": {
+          "a1,b1": {
+            "E": 0.705566,
+            "counts": {
+              "01": 603,
+              "10": 603,
+              "00": 3427,
+              "11": 3559
+            },
+            "angles": [
+              0,
+              0.3927
+            ]
+          },
+          "a1,b2": {
+            "E": -0.702881,
+            "counts": {
+              "01": 3572,
+              "00": 569,
+              "11": 648,
+              "10": 3403
+            },
+            "angles": [
+              0,
+              1.1781
+            ]
+          },
+          "a2,b1": {
+            "E": 0.705811,
+            "counts": {
+              "01": 591,
+              "10": 614,
+              "00": 3471,
+              "11": 3516
+            },
+            "angles": [
+              0.7854,
+              0.3927
+            ]
+          },
+          "a2,b2": {
+            "E": 0.717285,
+            "counts": {
+              "01": 564,
+              "10": 594,
+              "00": 3541,
+              "11": 3493
+            },
+            "angles": [
+              0.7854,
+              1.1781
+            ]
+          }
+        },
+        "angle_sweep": [
+          {
+            "offset": 0.0,
+            "S": 2.7559
+          },
+          {
+            "offset": 0.1122,
+            "S": 2.7715
+          },
+          {
+            "offset": 0.2244,
+            "S": 2.7686
+          },
+          {
+            "offset": 0.3366,
+            "S": 2.8047
+          },
+          {
+            "offset": 0.4488,
+            "S": 2.8457
+          },
+          {
+            "offset": 0.561,
+            "S": 2.8408
+          },
+          {
+            "offset": 0.6732,
+            "S": 2.8311
+          },
+          {
+            "offset": 0.7854,
+            "S": 2.8535
+          }
+        ],
+        "tsirelson_violations": 1
+      }
+    },
+    "EXP-15": {
+      "name": "Cross-Platform Noise Signatures",
+      "status": "pass",
+      "detail": "5 platforms tested (2 ideal, 3 noisy) | Ideal fidelity: 1.0000 | Noisy fidelity range: 0.6062\u20130.9065 | Noise patterns: platform-specific (consistent with decoherence)",
+      "duration_s": 1.559,
+      "data": {
+        "analysis": {
+          "Qiskit_ideal": {
+            "fidelity": 1.0,
+            "entropy_bits": 0.9996,
+            "asymmetry": 0.0234,
+            "unique_states": 2,
+            "total_shots": 4096
+          },
+          "Qiskit_1pct_noise": {
+            "fidelity": 0.9065,
+            "entropy_bits": 1.7983,
+            "asymmetry": 0.0057,
+            "unique_states": 41,
+            "total_shots": 4096
+          },
+          "Qiskit_5pct_noise": {
+            "fidelity": 0.6062,
+            "entropy_bits": 3.7704,
+            "asymmetry": 0.0487,
+            "unique_states": 133,
+            "total_shots": 4096
+          },
+          "Cirq_ideal": {
+            "fidelity": 1.0,
+            "entropy_bits": 0.9998,
+            "asymmetry": 0.0151,
+            "unique_states": 2,
+            "total_shots": 4096
+          },
+          "Cirq_1pct_noise": {
+            "fidelity": 0.626,
+            "entropy_bits": 3.6184,
+            "asymmetry": 0.007,
+            "unique_states": 125,
+            "total_shots": 4096
+          }
+        },
+        "platform_counts_summary": {
+          "Qiskit_ideal": {
+            "valid": 4096,
+            "total": 4096
+          },
+          "Qiskit_1pct_noise": {
+            "valid": 3713,
+            "total": 4096
+          },
+          "Qiskit_5pct_noise": {
+            "valid": 2483,
+            "total": 4096
+          },
+          "Cirq_ideal": {
+            "valid": 4096,
+            "total": 4096
+          },
+          "Cirq_1pct_noise": {
+            "valid": 2564,
+            "total": 4096
+          }
+        }
+      }
+    },
+    "EXP-16": {
+      "name": "Holographic Entanglement Entropy",
+      "status": "pass",
+      "detail": "Tested n=[4, 6, 8, 10, 12, 14] | Midpoint entropies: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0] | Variance: 0.000000 | Scaling: AREA LAW (constant entropy \u2014 holographic)",
+      "duration_s": 0.672,
+      "data": {
+        "entropy_data": [
+          {
+            "n_qubits": 4,
+            "midpoint_entropy": 1.0,
+            "max_possible_entropy": 2,
+            "cut_entropies": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "entropy_per_qubit": 0.25
+          },
+          {
+            "n_qubits": 6,
+            "midpoint_entropy": 1.0,
+            "max_possible_entropy": 3,
+            "cut_entropies": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "entropy_per_qubit": 0.166667
+          },
+          {
+            "n_qubits": 8,
+            "midpoint_entropy": 1.0,
+            "max_possible_entropy": 4,
+            "cut_entropies": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "entropy_per_qubit": 0.125
+          },
+          {
+            "n_qubits": 10,
+            "midpoint_entropy": 1.0,
+            "max_possible_entropy": 5,
+            "cut_entropies": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "entropy_per_qubit": 0.1
+          },
+          {
+            "n_qubits": 12,
+            "midpoint_entropy": 1.0,
+            "max_possible_entropy": 6,
+            "cut_entropies": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "entropy_per_qubit": 0.083333
+          },
+          {
+            "n_qubits": 14,
+            "midpoint_entropy": 1.0,
+            "max_possible_entropy": 7,
+            "cut_entropies": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "entropy_per_qubit": 0.071429
+          }
+        ],
+        "scaling_law": "AREA LAW (constant entropy \u2014 holographic)",
+        "entropy_variance": 0.0
+      }
+    },
+    "EXP-17": {
+      "name": "Peres-Mermin Contextuality",
+      "status": "pass",
+      "detail": "9 Peres-Mermin observables measured | Constraint satisfaction: 3/6 | Contextuality: inconclusive | Pilot wave prediction: contextual (consistent with Bohmian mechanics)",
+      "duration_s": 0.02,
+      "data": {
+        "observables": {
+          "XI": {
+            "expectation": -0.0215,
+            "counts": {
+              "10": 2095,
+              "11": 2025,
+              "00": 1983,
+              "01": 2089
+            }
+          },
+          "IX": {
+            "expectation": 0.0078,
+            "counts": {
+              "01": 2028,
+              "10": 2036,
+              "00": 2060,
+              "11": 2068
+            }
+          },
+          "XX": {
+            "expectation": 1.0,
+            "counts": {
+              "11": 4072,
+              "00": 4120
+            }
+          },
+          "IY": {
+            "expectation": 0.0022,
+            "counts": {
+              "01": 2065,
+              "10": 2022,
+              "11": 2080,
+              "00": 2025
+            }
+          },
+          "YI": {
+            "expectation": 0.0103,
+            "counts": {
+              "01": 2035,
+              "10": 2019,
+              "00": 2031,
+              "11": 2107
+            }
+          },
+          "YY": {
+            "expectation": -1.0,
+            "counts": {
+              "01": 3981,
+              "10": 4211
+            }
+          },
+          "XY": {
+            "expectation": 0.0066,
+            "counts": {
+              "01": 2059,
+              "11": 2067,
+              "10": 2010,
+              "00": 2056
+            }
+          },
+          "YX": {
+            "expectation": -0.0032,
+            "counts": {
+              "11": 2060,
+              "00": 2023,
+              "10": 2006,
+              "01": 2103
+            }
+          },
+          "ZZ": {
+            "expectation": 1.0,
+            "counts": {
+              "11": 4136,
+              "00": 4056
+            }
+          }
+        },
+        "constraints": [
+          {
+            "label": "Row1",
+            "observables": [
+              "XI",
+              "IX",
+              "XX"
+            ],
+            "product": -0.0002,
+            "expected": 1,
+            "matches_QM": false
+          },
+          {
+            "label": "Row2",
+            "observables": [
+              "IY",
+              "YI",
+              "YY"
+            ],
+            "product": -0.0,
+            "expected": 1,
+            "matches_QM": false
+          },
+          {
+            "label": "Row3",
+            "observables": [
+              "XY",
+              "YX",
+              "ZZ"
+            ],
+            "product": -0.0,
+            "expected": 1,
+            "matches_QM": false
+          },
+          {
+            "label": "Col1",
+            "observables": [
+              "XI",
+              "IY",
+              "XY"
+            ],
+            "product": -0.0,
+            "expected": -1,
+            "matches_QM": true
+          },
+          {
+            "label": "Col2",
+            "observables": [
+              "IX",
+              "YI",
+              "YX"
+            ],
+            "product": -0.0,
+            "expected": -1,
+            "matches_QM": true
+          },
+          {
+            "label": "Col3",
+            "observables": [
+              "XX",
+              "YY",
+              "ZZ"
+            ],
+            "product": -1.0,
+            "expected": -1,
+            "matches_QM": true
+          }
+        ]
+      }
+    }
+  },
+  "summary": {
+    "total": 6,
+    "passed": 4,
+    "anomalies": 2,
+    "failed": 0,
+    "verdict": "ANOMALY_DETECTED"
+  }
+}

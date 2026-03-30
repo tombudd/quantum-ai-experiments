@@ -3,7 +3,7 @@
 > Quantum computing experiments relevant to AI — active inference on quantum hardware, variational algorithms, and fidelity validation results. All circuits runnable on IBM Quantum and other public backends.
 
 [![Qiskit](https://img.shields.io/badge/Qiskit-1.x-6929C4?logo=qiskit)](https://qiskit.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![IBM Quantum](https://img.shields.io/badge/Runs%20on-IBM%20Quantum-blue)]()
 [![Status: Active](https://img.shields.io/badge/Status-Active%20Research-brightgreen)]()
 
