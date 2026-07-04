@@ -1,25 +1,29 @@
 # Quantum AI Experiments
 
-> Exploratory toy experiments at the intersection of quantum circuits, optimization, inference, and AI-adjacent research questions.
+> Public educational research sandbox exploring quantum information, simulator-based hypothesis testing, variational circuits, and quantum-inspired AI ideas.
 
 [![Qiskit](https://img.shields.io/badge/Qiskit-1.x-6929C4?logo=qiskit)](https://qiskit.org)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Status: Exploratory](https://img.shields.io/badge/Status-Exploratory%20Research-yellow)]()
+[![Status: Research Sandbox](https://img.shields.io/badge/Status-Research%20Sandbox-lightgrey)]()
 
 ---
 
 ## Scope
 
-This repository contains exploratory quantum computing experiments relevant to AI-adjacent optimization and inference questions, including:
+This repository contains small, reproducible experiments at the intersection of quantum information, simulator testing, optimization, and AI-adjacent inference questions.
 
-1. Toy active-inference-inspired optimization using variational circuits
-2. Quantum belief-propagation sketches
-3. Quantum random-walk experiments for state-space exploration
-4. Noise fingerprinting and simulator-vs-hardware comparison patterns
+The goal is not to claim production readiness, verified quantum advantage, AGI relevance, hardware breakthrough, or deployment utility. The goal is to make experimental thinking visible through clear, runnable, public-safe examples.
 
-These experiments are educational and exploratory. They do **not** claim production advantage, AGI relevance, verified quantum speedup, or deployment readiness.
+Current areas:
 
-Where hardware results are discussed, they should be treated as experimental observations that require independent reproduction.
+1. **Simulator smoke tests** — Bell, GHZ, QFT, and small variational-circuit checks across available local simulators.
+2. **Quantum-inspired inference sketches** — toy active-inference and belief-update ideas where code is present.
+3. **Quantum random-walk / search sketches** — exploratory state-space examples where code is present.
+4. **Noise and fidelity checks** — simulator-first comparisons where reproducible assumptions are documented.
+
+Where hardware or provider-backed results are discussed, they should be treated as experimental observations that require independent reproduction.
+
+See [`STATUS.md`](STATUS.md) for the current verification and claim boundaries.
 
 ---
 
@@ -29,82 +33,81 @@ Active inference and related probabilistic methods involve optimization over pro
 
 Possible research directions include:
 
-- Superposition as a representation for candidate states
-- Amplitude encoding for probability-like structures
-- Variational quantum circuits for optimization objectives
-- Quantum walks for exploratory search patterns
-- Noise characterization for realistic hardware limits
+- superposition-inspired representations for candidate states
+- amplitude-style encodings for probability-like structures
+- variational quantum circuits for optimization objectives
+- quantum walks for exploratory search patterns
+- simulator and noise characterization for realistic limits
 
 These are theoretical and experimental motivations, not claims of practical advantage.
 
 ---
 
-## Planned Public Structure
-
-The repository is being built as a safe public research surface. Planned structure:
+## Current Public Structure
 
 ```text
 quantum-ai-experiments/
-├── circuits/
-│   ├── active_inference_vqc.qasm
-│   ├── belief_propagation.qasm
-│   ├── quantum_walk.qasm
-│   └── noise_benchmark.qasm
-├── experiments/
-│   ├── 01_free_energy_vqc.py
-│   ├── 02_belief_propagation.py
-│   ├── 03_quantum_walk.py
-│   ├── 04_hardware_noise.py
-│   └── 05_classical_comparison.py
-├── results/
-│   └── sample_simulator_baseline.json
-├── analysis/
-│   └── example_analysis.ipynb
-└── docs/
-    ├── experimental_methodology.md
-    ├── hardware_notes.md
-    └── limitations.md
+├── run_all.py                 # Simulator-oriented smoke runner
+├── requirements.txt           # Minimal local dependencies
+├── STATUS.md                  # Verification and claim boundaries
+├── README.md
+└── results/                   # Generated locally when the runner is executed
 ```
 
-Until a file exists in the repository, the structure above should be read as a roadmap, not as a claim of implemented functionality.
+Future experiments may add `circuits/`, `experiments/`, `analysis/`, or `docs/` directories. Until a file exists in this repository, it should be read as roadmap only, not implemented functionality.
 
 ---
 
-## Example Experiment: Toy Variational Objective
+## What This Repo Is
 
-A central toy question:
+This is a public portfolio and learning repo for:
 
-**Can a small parameterized quantum circuit minimize a free-energy-inspired objective in a reproducible simulator setting?**
-
-The intended workflow is:
-
-1. Define a small synthetic probability distribution.
-2. Encode a toy belief state into a circuit representation.
-3. Optimize parameters using a classical optimizer around the quantum circuit.
-4. Compare against a classical baseline.
-5. Report limitations, noise sensitivity, and reproduction steps.
-
-This should be treated as a research sketch unless the accompanying code, data, and reproduction instructions are present.
+- quantum computing fundamentals
+- quantum simulator experiments
+- AI-adjacent inference and belief-update ideas
+- statistical testing discipline
+- public, non-proprietary research communication
 
 ---
 
-## Running Experiments
+## What This Repo Is Not
 
-Simulator-only examples should be runnable without a quantum hardware account.
+This repo is **not**:
+
+- a production AI runtime
+- a private-system integration surface
+- a live autonomous agent
+- proof of quantum advantage
+- proof of new physics
+- a release of private architecture, internal logs, proprietary schemas, or operational systems
+
+Any anomaly-like result in this repo should be treated as a prompt for further controls, not as a claim of discovery.
+
+---
+
+## Running the Smoke Runner
+
+Create a virtual environment:
 
 ```bash
-pip install "qiskit>=1.0" "qiskit-aer" numpy scipy matplotlib
-python experiments/01_free_energy_vqc.py --backend aer_simulator
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-Hardware-backed experiments may require an IBM Quantum account and should clearly distinguish simulator results from real-device results.
+Run the public smoke suite:
 
 ```bash
-export IBM_QUANTUM_TOKEN=your_token_here
-python experiments/01_free_energy_vqc.py --backend <backend_name>
+python run_all.py
 ```
 
-Do not commit tokens, credentials, provider job IDs containing private account context, or unreproducible private results.
+Generated outputs are written locally to:
+
+```text
+results/results_latest.json
+```
+
+Some provider-specific sections require optional simulator packages. If an optional provider package or token is missing, that section should skip or fail without implying failure of unrelated sections.
 
 ---
 
@@ -112,17 +115,17 @@ Do not commit tokens, credentials, provider job IDs containing private account c
 
 Any claimed result should include:
 
-- Backend or simulator used
-- Date of run
-- Circuit size
-- Shot count
-- Optimizer settings
-- Random seed where applicable
-- Classical baseline
-- Noise model or hardware notes
-- Clear limitations
+- backend or simulator used
+- date of run
+- circuit size
+- shot count
+- optimizer settings where applicable
+- random seed where applicable
+- classical baseline where applicable
+- noise model or hardware notes where applicable
+- clear limitations
 
-Claims of speedup, production utility, or AI-system relevance require extraordinary evidence and should not be made casually.
+Claims of speedup, production utility, AI-system relevance, hardware breakthrough, or new physics require extraordinary evidence and should not be made casually.
 
 ---
 
@@ -130,7 +133,36 @@ Claims of speedup, production utility, or AI-system relevance require extraordin
 
 This is a public exploratory repository. It may include toy circuits, synthetic data, simulator outputs, and redacted methodology.
 
-It must not include private production architecture, proprietary system internals, private receipts, unreleased research logs, secrets, API tokens, or internal codenames from private systems.
+It must not include private production architecture, proprietary system internals, private receipts, unreleased research logs, secrets, API tokens, private provider job context, or internal codenames from private systems.
+
+The preferred pattern for every experiment is:
+
+1. define the hypothesis clearly
+2. run an ideal simulator baseline
+3. run noisy or alternate simulator variants where available
+4. compare distributions using explicit statistical metrics where applicable
+5. label speculative results as speculative
+6. avoid claims that exceed the evidence
+
+---
+
+## Public Claim Boundary
+
+Strongest safe claim:
+
+```text
+This is a public educational quantum/AI experiment sandbox with simulator-first examples and explicit verification boundaries.
+```
+
+Avoid claiming:
+
+```text
+validated quantum advantage
+confirmed hardware breakthrough
+production AI integration
+private runtime connection
+new physics discovery
+```
 
 ---
 
@@ -143,4 +175,8 @@ It must not include private production architecture, proprietary system internal
 
 ---
 
-© 2025–2026 Tom Budd / ResoVerse Technologies · Apache 2.0 License
+## License
+
+Apache License 2.0. See [`LICENSE`](LICENSE).
+
+© 2025–2026 Tom Budd / ResoVerse Technologies
