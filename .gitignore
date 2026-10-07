@@ -26,6 +26,10 @@ build/
 venv/
 .venv/
 
+# Generated results
+results/results_latest.json
+results/*_latest.json
+
 # Node
 node_modules/
 npm-debug.log*
@@ -59,4 +63,3 @@ docker-compose.override.yml
 
 # Notebook checkpoints
 .ipynb_checkpoints/
-
