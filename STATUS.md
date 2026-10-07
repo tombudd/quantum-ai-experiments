@@ -1,55 +1,45 @@
-# Status and Claim Boundaries
+# Status
 
 This repository is a public educational research sandbox.
 
-## Current Status
+## Current Verification Boundary
+
+Current public verification is limited to bounded regression tests, small simulator-oriented smoke checks, and public-safe documentation.
+
+The repository does not provide:
+
+- a production quantum AI system
+- verified quantum advantage
+- validated hardware breakthrough claims
+- private AI integration
+- live autonomous behavior
+- deployment evidence
+
+## Current Runner and Experiments
+
+`run_all.py` runs small local simulator checks for Bell, GHZ, QFT, and variational circuits. Provider sections report a skip when the corresponding package is unavailable.
+
+`experiments/cross_domain_experiments.py` contains seeded statistical probes over synthetic data. Its noise sweep is an illustrative one-sided readout-bias model, not calibrated hardware noise. `experiments/frontier_experiments.py` is a review placeholder rather than an implemented experiment suite.
+
+## Safe Public Claim
 
 ```text
-REPO_STATUS: PUBLIC_RESEARCH_SANDBOX
-PRIVATE_RUNTIME_CONNECTION: NOT_PRESENT
-PRODUCTION_RUNTIME_CONNECTION: NOT_PRESENT
-AUTONOMOUS_AGENT_CONNECTION: NOT_PRESENT
-QUANTUM_ADVANTAGE_CLAIM: NOT_MADE
-NEW_PHYSICS_CLAIM: NOT_MADE
+This is a public educational quantum/AI experiment sandbox with simulator-first examples and explicit verification boundaries.
 ```
 
-## Verified Boundaries
+## Claims To Avoid
 
-The safe public claim is:
+Do not claim that this repository demonstrates:
 
-```text
-This repo contains small quantum/AI experiment examples and simulator-first probes for learning, portfolio review, and method demonstration.
-```
+- validated quantum advantage or verified speedup
+- confirmed hardware breakthroughs
+- production AI integration or AGI relevance
+- private runtime connection
+- new physics discovery
+- deployment readiness
 
-The repo should not be described as:
+## Public Boundary
 
-- a production system
-- a live autonomous runtime
-- a private architecture release
-- proof of quantum advantage
-- proof of new physics
-- a connected component of any private platform
+This repository should contain only toy circuits, synthetic data, simulator outputs, public methodology, and clear limitations.
 
-## Activity State
-
-This repo is live on GitHub, but it should be treated as a research sandbox rather than an actively maintained production package unless new commits, issues, tests, or releases establish otherwise.
-
-## Public Hardening Notes
-
-The public-hardening pass does four things:
-
-1. Removes project-specific private wording from public-facing files.
-2. Fixes the README/license mismatch by standardizing on Apache 2.0.
-3. Makes the smoke runner write results to a repository-relative path.
-4. Adds explicit claim boundaries so reviewers know what is and is not being asserted.
-
-## Future Clean-Room Additions
-
-Good next additions:
-
-- `tests/` for the smoke runner
-- GitHub Actions CI
-- small notebook-free examples
-- verified simulator result snapshots
-- rewritten public-safe experiment modules
-- a methods note explaining controls, p-values, and limitations
+It must not include private production architecture, proprietary system internals, private receipts, unreleased research logs, secrets, API tokens, private provider job context, or internal codenames from private systems.
